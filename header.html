@@ -1,0 +1,97 @@
+<!-- <header>
+    <h3 class="rec">Rec.MD</h3>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html" onclick="changePage('index.html')">ACASA</a></li>
+            <li><a href="#" onclick="toggleSubLinks()">ANUNTURI</a></li>
+            <li><a href="sfaturi.html" onclick="changePage('sfaturi.html')">SFATURI</a></li>
+            <li><a href="contacte.html" onclick="changePage('contacte.html')">CONTACTE</a></li>
+        </ul>
+    </div>
+    <section class="tipuri-anunturi" id="sublinks" style="display: none;">
+        <ul>
+            <li><a href="masini.html" onclick="changePage('masini.html')">MASINI</a></li>
+            <li><a href="vile.html" onclick="changePage('vile.html')">VILE</a></li>
+            <li><a href="electronice.html" onclick="changePage('electronice.html')">ELECTRONICE </a></li>
+        </ul>
+    </section>
+    <section class="bar-detalii">
+    </section>
+    <img src="inima1.png" class="inima">
+</header>
+<script>
+function changePage(page) {
+    window.location.href = page;
+}
+
+
+</script>
+
+
+<link rel="stylesheet" href="header.css"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sec1">
+        <header>
+            <h3 class="rec">Rec.MD</h3>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html" onclick="changePage('index.html')">ACASA</a></li>
+                    <li><a href="#" onclick="toggleSubLinks()">ANUNTURI</a></li>
+                    <li><a href="sfaturi.html" onclick="changePage('sfaturi.html')">SFATURI</a></li>
+                    <li><a href="contacte.html" onclick="changePage('contacte.html')">CONTACTE</a></li>
+                </ul>
+            </div>
+            <section class="tipuri-anunturi" id="sublinks" style="display: none;">
+                <ul>
+                    <li><a href="masini.html" onclick="changePage('masini.html')">MASINI</a></li>
+                    <li><a href="vile.html" onclick="changePage('vile.html')">VILE</a></li>
+                    <li><a href="electronice.html" onclick="changePage('electronice.html')">ELECTRONICE </a></li>
+                </ul>
+            </section>
+            <section class="bar-detalii">
+            </section>
+            <img src="inima1.png" class="inima">
+        </header>
+    </section>
+    <script>
+        function changePage(page) {
+            window.location.href = page;
+        }
+
+        function toggleSubLinks() {
+            var sublinks = document.getElementById("sublinks");
+            if (sublinks.style.display === "none") {
+                sublinks.style.display = "block";
+            } else {
+                sublinks.style.display = "none";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var images = document.querySelectorAll('.image-container img');
+            var index = 0;
+
+            function showNextImage() {
+                images[index].classList.remove('active');
+                index = (index + 1) % images.length;
+                images[index].classList.add('active');
+            }
+
+            setInterval(showNextImage, 2000);
+        });
+    </script>
+    <footer>
+        <h4>&copy; 2024 Rec.MD. Toate drepturile rezervate.</h4>
+    </footer>
+</body>
+</html>

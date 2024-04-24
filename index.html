@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sec1">
+        <header>
+            <h3 class="rec">Rec.MD</h3>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html" onclick="changePage('index.html')" id="a" class="nav-link active">ACASA</a></li>
+                    <li><a href="#" onclick="toggleSubLinks()"id="a">ANUNTURI</a></li>
+                    <li><a href="sfaturi.html" onclick="changePage('sfaturi.html')"id="a"class="nav-link">SFATURI</a></li>
+                    <li><a href="contacte.html" onclick="changePage('contacte.html')"id="a"class="nav-link">CONTACTE</a></li>
+                </ul>
+            </div>
+            <section class="tipuri-anunturi" id="sublinks" style="display: none;">
+                <ul>
+                    <li><a href="masini.html" onclick="changePage('masini.html')">MASINI</a></li>
+                    <li><a href="vile.html" onclick="changePage('vile.html')">VILE</a></li>
+                    <li><a href="electronice.html" onclick="changePage('electronice.html')">ELECTRONICE </a></li>
+                </ul>
+            </section>
+            <section class="bar-detalii">
+            </section>
+            <img src="inima1.png" class="inima">
+        </header>
+    </section>
+    <div class="image-container">
+        <img src="car1.jpeg" alt="Imagine 1">
+        <img src="case.jpeg" alt="Imagine 2">
+        <img src="trotineta.jpeg" alt="Imagine 3">
+    </div>
+    <p>Bine ați venit pe Rec.MD - destinația ta preferată pentru a descoperi cele mai recente anunțuri și reclame din Moldova!<br>
+        
+        Rec.MD este mai mult decât un simplu site de anunțuri - este o comunitate vibrantă în care oamenii din întreaga țară vin împreună pentru a cumpăra, vinde și interacționa într-un mod prietenos și eficient.<br>
+        
+        Cu o gamă largă de categorii, de la imobiliare la vehicule, locuri de muncă și multe altele, Rec.MD oferă o platformă ușor de utilizat pentru a găsi exact ceea ce căutați. Indiferent dacă sunteți în căutarea unei noi locuințe, a unui autoturism sau a unui loc de muncă, suntem aici pentru a vă ajuta să găsiți cele mai bune oferte.<br>
+        
+        Pe lângă anunțurile clasificate, Rec.MD aduce și cele mai recente reclame de la cele mai bune branduri locale și internaționale. De la promoții speciale și reduceri exclusive la lansări de produse și evenimente, veți fi mereu la curent cu tot ce este nou și interesant în lumea comerțului și a afacerilor.
+        
+        Alăturați-vă comunității noastre și începeți să explorați acum! Fie că sunteți cumpărător sau vânzător, Rec.MD este locul unde afacerile prind viață și unde oportunitățile abundă. Nu ratați nicio ofertă și nu pierdeți nicio ocazie - fiecare anunț contează pe Rec.MD!</p>
+    <script>
+        function changePage(page) {
+            window.location.href = page;
+        }
+
+        function toggleSubLinks() {
+            var sublinks = document.getElementById("sublinks");
+            if (sublinks.style.display === "none") {
+                sublinks.style.display = "block";
+            } else {
+                sublinks.style.display = "none";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var images = document.querySelectorAll('.image-container img');
+            var index = 0;
+
+            function showNextImage() {
+                images[index].classList.remove('active');
+                index = (index + 1) % images.length;
+                images[index].classList.add('active');
+            }
+
+            setInterval(showNextImage, 2000);
+        });
+    </script>
+    <footer>
+        <h4>&copy; 2024 Rec.MD. Toate drepturile rezervate.</h4>
+    </footer>
+</body>
+</html>

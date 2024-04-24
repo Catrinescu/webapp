@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="masini.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sec1">
+        <header>
+            <h3 class="rec">Rec.MD</h3>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html" onclick="changePage('index.html')">ACASA</a></li>
+                    <li><a href="#" onclick="toggleSubLinks()">ANUNTURI</a></li>
+                    <li><a href="sfaturi.html" onclick="changePage('sfaturi.html')">SFATURI</a></li>
+                    <li><a href="contacte.html" onclick="changePage('contacte.html')">CONTACTE</a></li>
+                </ul>
+            </div>
+            <section class="tipuri-anunturi" id="sublinks" style="display: none;">
+                <ul>
+                    <li><a href="masini.html" onclick="changePage('masini.html')"class="nav-link active">MASINI</a></li>
+                    <li><a href="vile.html" onclick="changePage('vile.html')"class="nav-link">VILE</a></li>
+                    <li><a href="electronice.html" onclick="changePage('electronice.html')"class="nav-link">ELECTRONICE </a></li>
+                </ul>
+            </section>
+            <section class="bar-detalii">
+            </section>
+            <img src="inima1.png" class="inima">
+        
+        </header>
+    </section>
+
+<div class="masini-container">
+    <div class="masina">
+        <img src="masina1.jpeg" class="masina-img">
+        <p class="nume">AUDI RS6</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+    <div class="masina">
+        <img src="masina2.jpeg" class="masina-img">
+        <p class="nume">AUDI RS3</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+    <div class="masina">
+        <img src="masina3.jpeg" class="masina-img">
+        <p class="nume">MERCEDES CLA</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina4.jpeg" class="masina-img">
+        <p class="nume">WOLKSWAGEN POLO</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina5.jpeg" class="masina-img">
+        <p class="nume">BMW X6</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina6.jpeg" class="masina-img">
+        <p class="nume">LAMBORGINI URUS</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina7.jpeg" class="masina-img">
+        <p class="nume">MERCEDES GLS</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina8.jpeg" class="masina-img">
+        <p class="nume">WOLKSWAGEN POLO</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina8.jpeg" class="masina-img">
+        <p class="nume">WOLKSWAGEN POLO</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina9.jpeg" class="masina-img">
+        <p class="nume">LAMBORGINI HURAKAN</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina10.jpeg" class="masina-img">
+        <p class="nume">BMW X3</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina11.jpeg" class="masina-img">
+        <p class="nume">MERCEDES 2011</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+    <div class="masina">
+        <img src="masina12.jpeg" class="masina-img">
+        <p class="nume">BMW X4</p>
+        <p class="pret">Pret: 10000$</p>
+        <button onclick="addHeart()">Adaugă la favorite</button>
+    </div>
+ 
+ 
+</div>
+
+
+
+
+    <script>
+        function changePage(page) {
+            window.location.href = page;
+        }
+
+        function toggleSubLinks() {
+            var sublinks = document.getElementById("sublinks");
+            if (sublinks.style.display === "none") {
+                sublinks.style.display = "block";
+            } else {
+                sublinks.style.display = "none";
+            }
+        }
+        function addHeart() {
+            var heartIcon = document.getElementById("heartIcon");
+            heartIcon.src = "inima2.png"; // Schimbați sursa imaginii pentru a afișa inima activată
+        }
+
+        
+    </script>
+    <footer>
+        <h4>&copy; 2024 Rec.MD. Toate drepturile rezervate.</h4>
+    </footer>
+</body>
+</html>
